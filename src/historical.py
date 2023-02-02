@@ -24,7 +24,7 @@ def main():
     dh = YahooFinance()
     start_date = datetime.strptime("01/01/2010", "%d/%m/%Y")
     end_date = datetime.strptime("31/12/2022", "%d/%m/%Y")
-    for ticker in ["MSFT","BITO", "VOO"]:
+    for ticker in ["MSFT","BITO", "VOO", "ZB=F"]:
         df = dh.get_ticker_df(ticker, start_date, end_date)
         df.drop(columns=["Volume","Open","High","Low", "Adj Close"], inplace=True)
         df.to_csv(f"../data/{ticker}.csv")
