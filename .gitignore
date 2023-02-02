@@ -127,6 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-data/BITO.csv
-data/MSFT.csv
-data/VOO.csv
+data/*.csv
+
+
+
